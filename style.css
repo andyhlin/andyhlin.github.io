@@ -1,0 +1,332 @@
+/* Reset */
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    width: 1536px; /* Fixed width for the entire website */
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fefefe;
+    height: 110px;
+}
+
+.nav-left {
+    font-size: 15px;
+    padding-left: 250px;
+}
+
+.nav-right {
+    display: flex;
+    gap: 25px;
+    padding-right: 273px;
+}
+
+.nav-right a {
+    text-decoration: none;
+    color: rgb(170, 170, 170);
+    font-size: 13px;
+}
+
+.nav-right a:hover {
+    color: black;   /* Changes color to black on hover */
+}
+
+.hero {
+    position: relative;
+    height: 690px;
+    padding-left: 255px;
+    padding-top: 140px;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(/images/lawyer.jpg);
+    background-size: cover;
+    background-position: center top;
+    filter: brightness(0.8) grayscale(20%);
+    z-index: -1;
+}
+
+/* .hero {
+    background-image: url(/images/lawyer.jpg);
+    background-size: cover;
+    background-position: center top; 
+    filter: brightness(0.7) grayscale(30%);
+    height: 690px;
+    padding-left: 255px;
+    padding-top: 40px;
+    padding-bottom: 50px;
+} */
+
+.hero-content {
+    background-color: #0b3453;
+    padding-top: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 70px;
+    text-align: left;
+    border-radius: 8px;
+    max-width: 355px;
+    width: 100%;
+    border-radius: 0;
+}
+
+.hero-content-white {
+    color: white;
+    font-size: 33px;
+}
+
+.hero-content-yellow {
+    color: #f9dc16;
+    font-size: 12px;
+    margin-top: 15px;
+    font-style: italic;
+}
+
+.email-input {
+    width: 100%;
+    height: 40px;
+    font-size: 18px;
+    padding: 10px;
+    border: 0;                      /* Removes any borders around input text */
+    margin-top: 25px;
+    background-color: #e4e9ec;
+}
+
+.signup-button {
+    background-color: #fadd17;
+    color: #000;
+    border: 0;              /* Removes any borders around button */
+    padding: 15px;
+    font-size: 12px;
+    cursor: pointer;        /* Changes cursor to pointer when hovering over button */
+    text-align: center;     /* Centers text inside button */
+    display: inline-block;
+    margin-top: 25px;
+    letter-spacing: 1px;
+}
+
+.features {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fefefe;
+    height: 430px;
+    padding: 0 250px;
+}
+
+h1 {
+    font-family: "Georgia", serif;
+    font-size: 35px;
+    font-weight: 900;
+    margin: 10px 10px;
+    letter-spacing: -1px
+}
+
+h2 {
+    color: black;
+    font-size: 16px;
+    font-weight: 300;
+    padding-bottom: 20px;
+}
+
+.features p {
+    color: gray;
+    font-size: 13px;
+    line-height: 1.5;
+    letter-spacing: -0.25px;
+}
+
+.ceo-quote {
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+}
+
+.quotes {
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.prices {
+    position: relative;
+    height: 800px;
+}
+
+.prices::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient( rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url(/images/glasses.png);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 1536px auto;
+    background-position: left;
+    filter: grayscale(100%);
+    z-index: -1;
+}
+
+.prices-content {
+    text-align: center;
+    padding-top: 60px;
+}
+
+.prices-content p {
+    line-height: 0;
+}
+
+.monthly-plans {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 90px 255px;
+}
+
+.plan {
+    position: relative;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: none;
+    padding: 70px 80px;
+    text-align: center;
+    filter: none;
+    background-image:
+        repeating-linear-gradient(0deg, rgba(204, 204, 204, 0.11) 0px, rgba(204, 204, 204, 0.11) 1px, transparent 1px, transparent 15px),
+        repeating-linear-gradient(90deg, rgba(204, 204, 204, 0.11) 0px, rgba(204, 204, 204, 0.11) 1px, transparent 1px, transparent 15px),
+        repeating-linear-gradient(45deg, rgba(204, 204, 204, 0.11) 0px, rgba(204, 204, 204, 0.11) 1px, transparent 1px, transparent 10px),
+        repeating-linear-gradient(-45deg, rgba(204, 204, 204, 0.11) 0px, rgba(204, 204, 204, 0.11) 1px, transparent 1px, transparent 10px);
+    background-size: 15px 15px;
+    background-position: 5px 0; 
+}
+
+.monthly-plans h2 {
+    font-size: 15px;
+}
+
+.monthly-plans ul {
+    list-style-type: none;
+    padding: 0;
+    line-height: 35px;
+    color: #696969;
+    font-size: 14px;
+
+}
+
+.cost {
+    padding-top: 40px;
+    font-size: 28px;
+    color: black;
+    font-weight: 500;
+}
+
+.buy-now-button {
+    background-color: #0c3c5e;
+    color: white;
+    border: 0;
+    padding: 20px 30px;
+    font-size: 14px;
+    cursor: pointer;
+    text-align: center;
+    display: inline-block;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    letter-spacing: 1.5px;
+}
+
+.free-sign-up {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 480px;
+    background-image: url(/images/notebook.jpg);
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    text-align: center;
+    z-index: -1;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(70, 140, 200, 0.7);  /* Other options: 50, 130, 180; 50, 130, 180; 0, 120, 180; 20, 140, 210 */
+}
+
+.free-sign-up::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(29, 35, 48, 0.6); 
+    z-index: 1;
+}
+
+.free-sign-up-content {
+    position: relative; /* Positions content relative to filters */
+    z-index: 2;         /* Positions content in front of all filters */
+    color: white;
+    line-height: 28px;
+}
+
+.try_free-button {
+    background-color: #fadd17;
+    color: black;
+    border: none;
+    padding: 15px 30px;
+    font-size: 13px;
+    cursor: pointer;
+    margin-top: 30px;
+}
+
+.footer {
+    background-color: #292d37;
+    color: white;
+    display: flex;
+    flex-direction: column;     /* Stack the address and logos vertically */
+    justify-content: center;    /* Center content vertically */
+    align-items: center;        /* Center content horizontally */
+    height: 260px;
+    text-align: center;         /* Center text */
+}
+
+.footer-address {
+    color: white;
+    padding-bottom: 15px;   /* Spacing btwn address & logos */
+    line-height: 20px;      /* Spacing btwn character lines */
+}
+
+.footer-logos {
+    display: flex;
+    justify-content: center;    /* Center logos */
+    gap: 30px;                  /* Space btwn logos */
+}
+
+.logo {
+    width: 35px;    /* Width of each logo */
+    height: auto;   /* Maintains aspect ratio of smaller logos */
+}
