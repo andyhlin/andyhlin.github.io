@@ -1,0 +1,313 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #e1e1e1;
+}
+
+.banner {
+    display: flex;
+    flex-direction: column;                 /* Align content in a column */
+    justify-content: center;                /* Center content vertically */
+    background: url(Images/banner.jpg);
+    background-size: 200%;                  /* Zooming into background image*/
+    background-position: left -40px;        /* Cropping to top left */
+    max-width: 500px;
+    height: 100px;
+    margin: 0 auto;                         /* Centering banner horizontally */
+    padding-left: 30px;                     /* Offsetting content from left edge */
+    margin-top: 10px;
+    color: #3d4146;
+    gap: 15px;
+    border: 1px solid #c7c9cb;
+}
+
+.search-fields {
+    display: flex;
+    flex-direction: column;  /* Align fields in a column */
+    margin: auto;
+    padding: 20px;
+    background-color: white;
+    max-width: 500px;        /* Limit width to 500px */
+    width: 100%;             /* Ensure it takes the full width of the parent */
+    color: #4564a3;
+    border: 1px solid #c7c9cb;
+    border-bottom: 2px solid #c7c9cb;
+}
+
+.required {
+    color: red;
+}
+
+.form-group {
+    display: block;         /* Ensure it behaves as a block element */
+    margin-bottom: 10px;    /* Margin between first stack and second stack of inputs */
+}
+
+.form-group label {
+    display: block;         /* Ensure it behaves as a block element */
+    margin-bottom: 5px;     /* Margin between label and input field */
+}
+
+.form-group input[type="text"],
+.form-group select {
+    width: 100%;             /* Ensure input fields fill their parent width */
+    padding: 8px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.checkbox-group {
+    display: flex;              /* Align items in a row */
+    gap: 2px;
+}
+
+#city-state-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+#city-state-container .form-group {
+    flex: 1;                 /* Make the city and state inputs share available space */
+    margin-right: 10px;       /* Add spacing between city and state */
+}
+
+#city-state-container .form-group:last-child {
+    margin-right: 0;          /* Remove margin from the last child */
+}
+
+/* Horizontal line between city/state and checkbox */
+.checkbox-group {
+    border-top: 1px solid #4564a3;
+    padding-top: 20px;
+    margin-top: 20px;
+}
+
+.checkbox-label {
+    margin-left: 0px;
+    color: #4564a3;
+}
+
+.button-group {
+    display: flex;
+    gap: 2px;
+    margin-top: 20px;
+}
+
+.submit-btn, .clear-btn {
+    padding: 10px 20px;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.submit-btn {
+    background-color: #4564a3;
+    color: white;
+    border-bottom: 5px solid #30436d;
+}
+
+.clear-btn {
+    background-color: #fdad05;
+    color: white;
+    border-bottom: 5px solid #fb7801;
+}
+
+#todays-weather {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    max-width: 800px;
+    margin: 0 auto;
+    border: 1px solid #c7c9cb;
+    border-bottom: 2px solid #c7c9cb;
+    box-shadow: -3px 7px 5px rgba(0, 0, 0, 0.2), 3px -0.5px 5px rgba(0, 0, 0, 0.2); /* Horizontal offset, vertical offset, blur radius, shadow color */
+    padding: 15px 25px;
+    color: #3d4146;
+    gap: 20px;
+}
+
+#todays-weather-code-temperature {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 40px;
+    margin-right: 160px;
+}
+
+#weather-results {
+    display: none;
+    margin-top: 50px;
+}
+
+#todays-other-fields {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+.todays-field {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.weeks-weather {
+    display: flex;
+    justify-content: center;
+    width: 1000px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 10px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    background-color: white;
+}
+
+th {
+    background-color: #4564a3;
+    color: black;
+    font-weight: 300;
+}
+
+tr:hover {
+    cursor: pointer;
+}
+
+td img {
+    width: 30px;
+    height: auto;
+    margin-right: 8px;
+}
+
+#daily-weather-details {
+    display: none;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.daily-weather-details-hr {
+    display: flex;
+    border: none;
+    height: 1px;
+    background-color: #f1f1f1;
+    margin: 20px auto;
+    width: 350px; 
+    box-shadow: none;
+}
+
+.weather-charts-hr {
+    display: flex;
+    border: none;
+    height: 1px;
+    background-color: #f1f1f1;
+    margin: 20px auto;
+    width: 260px; 
+    box-shadow: none;
+}
+
+.weather-card {
+    display: none;
+    max-width: 500px;
+    height: auto;
+    margin: 30px auto; /* Centers the card horizontally */
+    padding: 20px;
+    background-color: white;
+    box-shadow: -3px 7px 5px rgba(0, 0, 0, 0.2), 3px -0.5px 5px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(to bottom, #f1f1f1 15%, #30436d 100%);
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid #c7c9cb;
+    border-bottom: 2px solid #c7c9cb;
+}
+
+  
+.weather-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    color: #30436d;
+}
+
+.weather-header-left {
+    display: flex;
+    flex-direction: column;
+}
+
+.weather-header-left p {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+
+.weather-card img {
+    width: 150px;
+    height: auto;
+}
+
+.weather-details {
+    display: flex;
+    justify-content: center;
+    color: white;
+    margin-top: 20px;
+    gap: 5px;
+    margin-bottom: 10px;
+}
+
+.weather-details-left {
+    text-align: right;
+}
+
+.weather-details-right {
+    text-align: left;
+}
+
+.weather-details-left p,
+.weather-details-right p {
+    margin-bottom: 8px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.weather-charts-header {
+    margin-top: 40px;
+}
+
+#chart-container {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    gap: 40px;
+}
+
+#error-page {
+    display: none;
+    justify-content: center;
+    margin: 10px auto;
+    background-color: white;
+    width: 500px;
+    padding: 10px;
+    color: #4564a3;
+    font-weight: bold;
+    border: 1px solid #c7c9cb;
+    border-bottom: 2px solid #c7c9cb;
+}
