@@ -125,10 +125,13 @@ body {
     margin: 0 auto;
     border: 1px solid #c7c9cb;
     border-bottom: 2px solid #c7c9cb;
-    box-shadow: -3px 7px 5px rgba(0, 0, 0, 0.2), 3px -0.5px 5px rgba(0, 0, 0, 0.2); /* Horizontal offset, vertical offset, blur radius, shadow color */
     padding: 15px 25px;
     color: #3d4146;
     gap: 20px;
+}
+
+#todays-weather:hover {
+    box-shadow: -3px 7px 5px rgba(0, 0, 0, 0.2), 3px -0.5px 5px rgba(0, 0, 0, 0.2); /* Horizontal offset, vertical offset, blur radius, shadow color */
 }
 
 #todays-weather-code-temperature {
